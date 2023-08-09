@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03 CSS Combinators</title>
+  <style>
+    /*Child Combinator*/
+    /*section>h4:last-child{*/
+    /*  color: aqua;*/
+    /*}*/
+
+    /*Decendant Combinator - It has space between two elements*/
+    /*section h4{*/
+    /*  color: darkmagenta;*/
+    /*}*/
+
+    /*Adjacent Combinator - select the element which i located first after given first element within same location*/
+    /*h4+div{*/
+    /*  color: orangered;*/
+    /*}*/
+
+    /*Genaral Siblings Combinator - Select element which is located after given first element any locations*/
+    /*h4~div{*/
+    /*  color: deeppink;*/
+    /*}*/
+
+    ul>li:first-child>ol>li:first-child{
+      color: red;
+    }
+    ul>li:first-child>ol>li{
+      color: deeppink;
+    }
+    ul>li:first-child>ol>li:nth-child(2){
+      color: orangered;
+    }
+
+    ul>li:nth-child(2)>ol>li:first-child>ol>li:last-child{
+      color: green;
+    }
+
+    ul>li:nth-child(2)>ol>li:first-child>ol>li:nth-child(3)>ul>li:nth-child(2){
+      color: blue;
+    }
+
+  </style>
+</head>
+<body>
+<!--      <section>-->
+<!--        <div>Hiiiiiii</div>-->
+<!--        <h4>Hello CSS</h4>-->
+<!--        <h1>Sachitha</h1>-->
+<!--        <div>-->
+<!--          <h4>CSS Content</h4>-->
+<!--          <div>Intro</div>-->
+<!--          <div>Basics</div>-->
+<!--        </div>-->
+<!--        <h1>Sachitha Jayasinghe</h1>-->
+<!--        <div>-->
+<!--          <div>Sachitha</div>-->
+<!--        </div>-->
+<!--        <h4>Hello JS</h4>-->
+<!--      </section>-->
+      <br>
+      <hr>
+      <br>
+<div>
+<ul>
+  <li>Java
+    <ol>
+      <li>Java Basics</li>
+      <li>JavaEE</li>
+      <li>Java Spring Boot</li>
+      <li>MySql</li>
+    </ol>
+  </li>
+  <li>UI Technologies
+    <ol>
+      <li>HTML
+        <ol>
+          <li>Introduction to HTML</li>
+          <li>HTML Text Formating</li>
+          <li>HTML Multimedia
+            <ul>
+              <li>Add Images</li>
+              <li>Add Videos</li>
+              <li>Add Audios</li>
+            </ul>
+          </li>
+          <li>HTML Forms</li>
+          <li>HTML Tables</li>
+        </ol>
+      </li>
+      <li>CSS</li>
+      <li>JS</li>
+    </ol>
+  </li>
+  <li>AWS and ML</li>
+</ul>
+</div>
+
+</body>
+</html>

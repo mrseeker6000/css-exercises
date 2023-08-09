@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 Selectors CSS</title>
+
+    <style>
+    /*!*Type Selector*!*/
+    /*h1{*/
+    /*    color: red;*/
+    /*}*/
+    /*p{*/
+    /*    background-color: lightgray;*/
+    /*}*/
+
+    /*!*ID Selector*!*/
+    /*#subtopic1{*/
+    /*    color: green;*/
+    /*}*/
+
+    /*!*Class Selector*!*/
+    /*.mystyle{*/
+    /*    color: aqua;*/
+    /*    background-color: black;*/
+    /*}*/
+    /*.mystyle2{*/
+    /*    font-weight: bold;*/
+    /*}*/
+
+    /*!*Univeral Selector*!*/
+    /*its select all*/
+    /*
+          *{                                                    */
+    /*      color: aqua;*/
+    /*     }                                                         */
+
+    /*Attribute Selector*/
+    /*Attribute Selector only with attribute*/
+    /*[name]{*/
+    /*    color: red;*/
+    /*}*/
+    /*[href]{*/
+    /*    font-weight: bold;*/
+    /*    color: gold;*/
+    /*}*/
+
+    /*Attribute selector with attribute with value*/
+    /*[name ="js"]{*/
+    /*    font-weight: bold;*/
+    /*}*/
+    /*[href ="https://www.google.com"]{*/
+    /*    background-color: green;*/
+    /*}*/
+
+    /*Attribute selector with starting value*/
+    /*[href ^= "http"]{*/
+    /*    background-color: crimson;*/
+    /*}*/
+
+    /*Attribute selector with ending value*/
+    /*[href $=".lk"]{*/
+    /*    background-color: deeppink;*/
+    /*}*/
+
+    /*Attribute selector with given value*/
+    /*[href *="https"]{*/
+    /*    background-color: deeppink;*/
+    /*}*/
+    /*[href *="students"]{*/
+    /*    background-color: deeppink;*/
+    /*}*/
+
+    /*Attribute selector with given word*/
+    /*[href ~="students"]{*/
+    /*    background-color: deeppink;*/
+    /*}*/
+
+    /*Attribute selector with type selector*/
+    /*a[name="google"]{*/
+    /*    background-color: deeppink;*/
+    /*}*/
+
+    /*Attribute selector with class selector*/
+    /*.mystyle[name]{*/
+    /*    background-color: red;*/
+    /*}*/
+
+
+    /*Pseudo Selectors*/
+    /*Select specific status of an element*/
+
+    /*:hover - Apply style when mouse move*/
+    /*h1:hover{*/
+    /*    color: red;*/
+    /*    cursor: pointer;*/
+    /*}*/
+
+    /*:active - Apply style when the click on the element*/
+    /*h1:active{*/
+    /*    color: aqua;*/
+    /*}*/
+
+    /*:visited - apply styles to already visited links*/
+    /*a:visited{*/
+    /*    color: gold;*/
+    /*}*/
+
+    /*:link - apply styles to non-visited links*/
+    /*a:link{*/
+    /*    color: green;*/
+    /*}*/
+
+    /*:focus - apply styles when focus to the element*/
+    /*input:focus{*/
+    /*    background-color: blue;*/
+    /*}*/
+
+    /*select specific element according to the tree-structure (element location)*/
+
+    /*:first-child - Apply styles to first-child of parent*/
+    /*li:first-child{*/
+    /*    font-weight: bold;*/
+    /*}*/
+
+    /*:last-child - apply styles to last-child of parent*/
+    /*li:last-child{*/
+    /*    font-weight: bold;*/
+    /*    color: red;*/
+    /*}*/
+
+    /*:nth-child(n) - Select any element from up to down*/
+    /*li:nth-child(4){*/
+    /*    color: deeppink;*/
+    /*}*/
+    /*h4:nth-child(3){*/
+    /*    color: aqua;*/
+    /*}*/
+
+    /*:nth-last-child(n) - Select any element from down to up*/
+    /*h4:nth-last-child(2){*/
+    /*    color: aqua;*/
+    /*}*/
+
+    /*:only-child - Apply styles to if list has only child */
+    /*li:only-child{*/
+    /*    color: aqua;*/
+    /*}*/
+
+    /*ol>li:first-child{*/
+    /*    color: aqua;*/
+    /*}*/
+
+
+    /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*Pseudo Selector elements*/
+    /*::before - add a content before the current content and style it*/
+    h1::before{
+        content: "🖕";
+    }
+    /*::after - add a content after the current content and style it*/
+    h1::after{
+        content: "🖕";
+    }
+
+    /*::first-letter - add style to first letter to current content */
+    /*h3::first-letter{*/
+    /*    color: red;*/
+    /*}*/
+
+    /*h1::first-letter{*/
+    /*    color: red;*/
+    /*}*/
+
+    /*::first-line - add style to phargraph fiest setence*/
+    /*p::first-line{*/
+    /*    color: aqua;*/
+    /*}*/
+
+    /*::placeholder - add styles to placeholder*/
+    /*input::placeholder{*/
+    /*    color: deeppink;*/
+    /*}*/
+    /*textarea::placeholder{*/
+    /*    color: deeppink;*/
+    /*}*/
+
+    /*::file-selector-button - add style to file selector button*/
+    /*input::file-selector-button{*/
+    /*    background-color: orangered;*/
+    /*}*/
+
+
+
+    /*::selection - apply styles web content selections (highlight and select)*/
+    /*::selection{*/
+    /*    background-color: black;*/
+    /*    color: aqua;*/
+    /*    font-weight: bold;*/
+    /*}*/
+
+
+    ::marker{
+        content: "🖕";
+    }
+
+    input::file-selector-button:hover{
+        background-color: black;
+    }
+
+
+    /*Grouping Selector*/
+    h1,h3,h4, #subtopic1, .mystyle{
+        color: aqua;
+        font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+    <h1 class="mystyle">ITS - Internet Technologies</h1>
+    <section>
+        <h4>IJSE 01</h4>
+        <h4>IJSE 02</h4>
+        <h4>IJSE 03</h4>
+        <h4>IJSE 04</h4>
+        <h4>IJSE 05</h4>
+    </section>
+
+
+    <a href="https://www.google.com" name="google">Google</a>
+    <a href="https://www.github.com" name="css">GitHub</a>
+    <a href="https://www.ijse.lk">IJSE</a>
+    <a href="http://www.ijsestudents.lkhttps">IJSE Students</a>
+    <a href="http://www.ijse students .lk">IJSE Students 2</a>
+
+    <h2 id="subtopic1">Content</h2>
+
+    <ol>
+        <li name="google">HTML</li>
+        <li>CSS
+            <ol>
+                <li>Introduction to CSS</li>
+                <li>History of CSS</li>
+                <li>CSS Rule</li>
+                <li>CSS Selectors</li>
+                <li>Other CSS Topics</li>
+            </ol>
+        </li>
+        <li>JS</li>
+    </ol>
+
+    <ol>
+        <li><h3>Sachitha</h3></li>
+    </ol>
+
+    <section name="html">
+        <h3 id="subtopic2" class="mystyle">HTML</h3>
+        <p class="mystyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur libero nobis sint sunt, totam ut veritatis! Alias, aliquid asperiores autem dignissimos eos minima nihil officiis quia repellendus, sed temporibus, veniam?</p>
+    </section>
+    <section>
+        <h3 class="mystyle" name="css">CSS</h3>
+        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur libero nobis sint sunt, totam ut veritatis! Alias, aliquid asperiores autem dignissimos eos minima nihil officiis quia repellendus, sed temporibus, veniam?</p>
+    </section>
+    <section name="js">
+        <h3 class="mystyle">JS</h3>
+        <p class="mystyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur libero nobis sint sunt, totam ut veritatis! Alias, aliquid asperiores autem dignissimos eos minima nihil officiis quia repellendus, sed temporibus, veniam?</p>
+    </section>
+    <br>
+    <hr>
+    <br>
+
+    <form action="">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" placeholder="Enter Name">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" placeholder="Input Email">
+        <br>
+        <br>
+        <label for="message">Message</label>
+        <br>
+        <textarea placeholder="Input Message" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="file">
+        <br>
+        <br>
+        <button type="submit">Submit !!!</button>
+        <button type="reset">Reset !!!</button>
+    </form>
+</body>
+</html>

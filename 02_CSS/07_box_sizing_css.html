@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07 Box Sizing CSS</title>
+  <style>
+    /*01-content-box*/
+    /*02-border-box ------ box-sizing: border-box;*/
+
+    .box{
+      width: 300px;
+      height: 200px;
+
+    }
+    #box1{
+      /*01-content-box*/
+      background-color: aqua;
+      border: 10px solid black;
+      padding: 20px;
+      /*02-border-box  auto fixing box size*/
+      box-sizing: border-box;
+    }
+
+    #box2{
+      background-color: deeppink;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="box1" class="box"></div>
+  <div id="box2" class="box"></div>
+</body>
+</html>

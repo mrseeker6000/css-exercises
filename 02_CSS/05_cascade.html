@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 CSS Cascade</title>
+    <style>
+        #btnid{
+            color: aqua;
+        }
+        .btn{
+            color: deeppink;
+        }
+        button{
+            color: red;
+        }
+
+        button{
+            color: blue;
+        }
+
+        ol>li>ul>li-{
+            color: deeppink;
+        }
+
+        ul>li:first-child{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btnid" class="btn" type="button">Click Me!</button>
+
+    <ol>
+        <li>
+            Java
+            <ul>
+                <li style="color: red">Basics</li>
+                <li>Advanced</li>
+            </ul>
+        </li>
+        <li>js</li>
+        <li>Go Lang</li>
+    </ol>
+
+</body>
+</html>
